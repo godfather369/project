@@ -11,7 +11,7 @@ body{
 #header{
     background-color: pink;
     flex-basis: 100vw;
-    height: 10vh;
+    height: 15vh;
 }
 
 #digital{
@@ -24,12 +24,9 @@ body{
     background-color: bisque;
     flex-grow:1;
     height: 35vh;
-
 }
 #carousel{
-    background-color: cyan;
+    background-color: black;
     flex-basis: 100vw;
-    height: 55vh;
-
-
+    height: 50vh;
 }
