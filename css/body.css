@@ -2,7 +2,6 @@ body{
     padding:0;
     margin:0;
     border: 0;
-    
 }
 #container{
     display: flex;
@@ -18,19 +17,19 @@ body{
 #digital{
     background-color: powderblue;
     flex-grow: 1;
-    height: 30vh;
+    height: 35vh;
 }
 
 #analog{
     background-color: bisque;
     flex-grow:1;
-    height: 30vh;
+    height: 35vh;
 
 }
 #carousel{
     background-color: cyan;
     flex-basis: 100vw;
-    height: 60vh;
+    height: 55vh;
 
 
 }
