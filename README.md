@@ -1,2 +1,2 @@
 # project
-image carousel
+image carousel, 
