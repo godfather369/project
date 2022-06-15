@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,16 +11,22 @@
     <link rel="stylesheet" href="./css/digitalTimer.css">
     <link rel="stylesheet" href="./css/imageCarousel.css">
 </head>
+
 <body>
 
     <div id="container">
         <div id="header">Head</div>
+
         <div id="digital">Digital Clock</div>
-        <div id="analog">Analog Clock</div>
 
-
-
-        <div class="carousel">
+        <div id="analog">
+            <div id="clock">
+                <div id="hand"></div>
+            </div>
+            <button id="reset2">RESET</button>
+        </div>
+        
+        <div id="carousel">
             <div class="item">
                 <div class="carousel__item carousel__item--selected"><img src="./images/1.jpeg" alt="Image 1"></div>
                 <div class="carousel__item"><img src="./images/2.jpeg" alt="Image 2"></div>
@@ -34,7 +41,8 @@
                 <button type="reset">RESET</button>
             </div>
         </div>
-    </div> 
+    </div>
     <script src="./app.js"></script>
 </body>
+
 </html>
