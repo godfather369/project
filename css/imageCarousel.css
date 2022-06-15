@@ -1,19 +1,21 @@
-#carouselNav{
+.carousel{
+    background-color: black;
+}
+
+.carousel__nav{
     width: 100vw;
     height: 5vh;
-    background-color: red;
     text-align: center;
 }
 
-#items{
+.item{
     width: 100vw;
     height: 40vh;
 }
 
-#resetButton{
+.resetButton{
     width: 100vw;
     height: 5vh;
-    background-color: green;
     text-align: center;
 }
 
@@ -26,10 +28,21 @@ img{
     height: 36vh;
 }
 
-.dot{
+.carousel__button{
     display: inline-block;
     height: 10px;
     width: 10px;
-    background-color: white;
+    background-color: rgba(255,255,255,0.2);
     border-radius: 50%;
+}
+
+.carousel__button--selected{
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.carousel__item{
+    display: none;
+}
+.carousel__item--selected{
+    display: block;
 }
