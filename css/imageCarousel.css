@@ -1,0 +1,35 @@
+#carouselNav{
+    width: 100vw;
+    height: 5vh;
+    background-color: red;
+    text-align: center;
+}
+
+#items{
+    width: 100vw;
+    height: 40vh;
+}
+
+#resetButton{
+    width: 100vw;
+    height: 5vh;
+    background-color: green;
+    text-align: center;
+}
+
+img{
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    margin-left: 25vw;
+    margin-right:25vw;
+    width: 50vw;
+    height: 36vh;
+}
+
+.dot{
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    border-radius: 50%;
+}

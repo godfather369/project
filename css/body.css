@@ -18,19 +18,17 @@ body{
 #digital{
     background-color: powderblue;
     flex-grow: 1;
-    height: 30vh;
+    height: 40vh;
 }
 
 #analog{
     background-color: bisque;
     flex-grow:1;
-    height: 30vh;
+    height: 40vh;
 
 }
 #carousel{
-    background-color: cyan;
+    background-color: black;
     flex-basis: 100vw;
-    height: 60vh;
-
-
+    height: 50vh;
 }
