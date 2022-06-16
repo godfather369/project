@@ -1,0 +1,20 @@
+#countdownTimer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: red;
+  font-size: 5vh;
+  padding: 3px;
+}
+
+/* .main { */
+#digital {
+  background-color: aquamarine;
+  text-align: center;
+}
+
+.reset {
+  background-color: azure;
+  color: blue;
+  margin: 2vh;
+  font-size: 2.5vh;
+}
+
