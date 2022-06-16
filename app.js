@@ -1,3 +1,4 @@
+
 const startingTime = 15;
 
 let time = startingTime;
@@ -23,3 +24,4 @@ reset.addEventListener("click", () => {
   clearInterval(setInterval);
   time = startingTime;
 });
+

@@ -23,10 +23,31 @@
           </div>
         </div>
       </div>
-      <div id="analog">Analog Clock</div>
-      <div id="carousel">Carousel</div>
-    </div>
 
+        <div id="analog">
+            <div id="clock">
+                <div id="hand"></div>
+            </div>
+            <button id="reset2">RESET</button>
+        </div>
+        
+        <div id="carousel">
+            <div class="item">
+                <div class="carousel__item carousel__item--selected"><img src="./images/1.jpeg" alt="Image 1"></div>
+                <div class="carousel__item"><img src="./images/2.jpeg" alt="Image 2"></div>
+                <div class="carousel__item"><img src="./images/3.jpg" alt="Image 3"></div>
+            </div>
+            <div class="carousel__nav">
+                <span class="carousel__button carousel__button--selected"></span>
+                <span class="carousel__button"></span>
+                <span class="carousel__button"></span>
+            </div>
+            <div class="resetButton">
+                <button type="reset">RESET</button>
+            </div>
+        </div>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
+
