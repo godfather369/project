@@ -1,35 +1,41 @@
-div{
-    padding:0;
-    margin:0;
+#analog{
+    text-align: center;
 }
 
-#analog{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    align-items: center;
-    justify-content: space-evenly;
+#reset{
+    display: block;
+    margin: auto auto;
 }
 
 #clock{
-    display: inline-block;
+    display:inline-block;
+    margin: 4% auto;
     border: 5px solid black;
     width: 150px;
     height: 150px;
-    border-radius: 50%;
+    border-radius: 80px;
+   
 }
 
 #hand{
     display:inline-block;
     width: 4px;
-    height: 70px;
+    height: 75px;
     background-color: black;
     transform-origin: 2px 70px;
-    transform: translateY(5px) translateX(73px);
+    transform: translateY(5px);
 }
 
-#head:hover #hand{
-    transform: translateY(5px) translateX(73px) rotate(1turn);
-    transition: transform 10s linear;
+.anim{
+    animation: 10s linear infinite rotor;
+}
+
+@keyframes rotor{
+    from{
+        transform:translateY(5px) rotate(0deg);
+    }
+    to{
+        transform:translateY(5px) rotate(360deg);
+    }
 }
 

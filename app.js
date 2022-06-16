@@ -1,4 +1,7 @@
 
+
+
+
 const startingTime = 15;
 
 let time = startingTime;
@@ -24,4 +27,18 @@ reset.addEventListener("click", () => {
   clearInterval(setInterval);
   time = startingTime;
 });
+
+let arm=document.querySelector('#hand');
+let rst=document.querySelector("#reset");
+arm.classList.add('anim');
+arm.style.animationDuration=startingTime+'s';
+
+function rotor(){
+    arm.classList.remove('anim');
+    void arm.offsetWidth;
+    arm.classList.add('anim');
+}
+
+rst.addEventListener('click', rotor)
+
 
