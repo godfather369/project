@@ -8,6 +8,7 @@
 /* .main { */
 #digital {
   background-color: aquamarine;
+  text-align: center;
 }
 
 .reset {
@@ -17,7 +18,3 @@
   font-size: 2.5vh;
 }
 
-body {
-  background-color: bisque;
-  text-align: center;
-}
