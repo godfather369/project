@@ -1,10 +1,27 @@
-//Function for Analog Clock
 
-let rst2=document.querySelector('#reset2');
+const startingTime = 15;
 
-const analogClock=rst2.addEventListener('click',()=>{
-    const arm=document.querySelector('#hand');
-    arm.style.backgroundColor='red';
-    arm.style.transform="translateY(5px) translateX(73px) rotate(1turn)"
-    arm.style.transition='transform 10s linear'
-})
+let time = startingTime;
+
+let reset = document.querySelector(".reset");
+
+const timer = document.getElementById("countdownTimer");
+
+let id = setInterval(updateTimer, 1000);
+
+function updateTimer() {
+  if (time < 10) {
+    time = "0" + time;
+  }
+  timer.innerHTML = `${time}`;
+  time--;
+  if (time < 0) {
+    time = startingTime;
+  }
+}
+
+reset.addEventListener("click", () => {
+  clearInterval(setInterval);
+  time = startingTime;
+});
+
