@@ -13,7 +13,7 @@
     border: 0.625vh solid black;
     width: 18.75vh;
     height: 18.75vh;
-    border-radius: 80px;
+    border-radius: 15vh;
 }
 
 #hand{
@@ -22,7 +22,7 @@
     height: 9.375vh;
     background-color: black;
     transform-origin: 0.25vh 8.75vh;
-    transform: translateY(5px);
+    transform: translateY(0.625vh);
 }
 
 .anim{
@@ -31,10 +31,10 @@
 
 @keyframes rotor{
     from{
-        transform:translateY(5px) rotate(0deg);
+        transform:translateY(0.625vh) rotate(0deg);
     }
     to{
-        transform:translateY(5px) rotate(360deg);
+        transform:translateY(0.625vh) rotate(360deg);
     }
 }
 
