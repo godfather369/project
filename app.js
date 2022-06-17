@@ -43,3 +43,15 @@ rst.addEventListener('click',()=>{
 })
 
 
+<<<<<<< Updated upstream
+=======
+start.addEventListener("click", () => {
+  if(userInput.value===""){
+    startingTime=10;
+  }else{
+    startingTime=userInput.value;
+  }
+  resetFunc();
+  userInput.value = "";
+});
+>>>>>>> Stashed changes
