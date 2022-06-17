@@ -4,7 +4,7 @@ let reset = document.querySelector(".reset");
 const timer = document.getElementById("countdownTimer");
 
 timer.innerHTML = `${time}`;
-//let id = setInterval(updateTimer, 1000);
+let id = setInterval(updateTimer, 1000);
 function updateTimer() {
   if (time <=1) {
     time = startingTime;
@@ -30,7 +30,7 @@ reset.addEventListener("click", () => {
 //Function for Analog Clock Part
 let arm=document.querySelector('#hand');
 let rst=document.querySelector("#reset");
-//arm.classList.add('anim');
+arm.classList.add('anim');
 arm.style.animationDuration=startingTime+'s';
 function rotor(){
     arm.classList.remove('anim');

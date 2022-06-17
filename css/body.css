@@ -30,3 +30,7 @@ body{
     flex-basis: 100vw;
     height: 50vh;
 }
+
+button{
+    font-size: 2vh;
+}
