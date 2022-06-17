@@ -47,7 +47,12 @@ rst.addEventListener("click", () => {
 });
 
 start.addEventListener("click", () => {
-  startingTime = userInput.value;
+  if(userInput.value===""){
+    startingTime=10;
+  }else{
+    startingTime=userInput.value;
+  }
   resetFunc();
   userInput.value = "";
 });
+
