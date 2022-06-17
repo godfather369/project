@@ -12,6 +12,7 @@ function updateTimer() {
   if (time <= 1) {
     time = startingTime;
     timer.innerHTML = `${time}`;
+    buttonAnimation();
   } else {
     time--;
     timer.innerHTML = `${time}`;
@@ -56,3 +57,14 @@ start.addEventListener("click", () => {
   userInput.value = "";
 });
 
+let button=document.querySelectorAll(".button");
+let i=0;
+
+function buttonAnimation(){
+  button[i].classList.remove("selected");
+  i++;
+  if(i===3){
+    i=0;
+  }
+  button[i].classList.add("selected");
+}
