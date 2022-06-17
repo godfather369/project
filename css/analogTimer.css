@@ -10,7 +10,7 @@
 #clock{
     display:inline-block;
     margin: 4vh auto;
-    border: 0.625vh solid black;
+    border: 0.625vh solid red;
     width: 18.75vh;
     height: 18.75vh;
     border-radius: 15vh;
@@ -20,7 +20,7 @@
     display:inline-block;
     width: 0.5vh;
     height: 9.375vh;
-    background-color: black;
+    background-color: white;
     transform-origin: 0.25vh 8.75vh;
     transform: translateY(0.625vh);
 }

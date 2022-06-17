@@ -1,4 +1,7 @@
-let startingTime = 5;
+
+let userInput = document.getElementById("entertime");
+
+let startingTime = 10;
 let time = startingTime;
 let reset = document.querySelector(".reset");
 const timer = document.getElementById("countdownTimer");
@@ -6,19 +9,19 @@ const timer = document.getElementById("countdownTimer");
 timer.innerHTML = `${time}`;
 let id = setInterval(updateTimer, 1000);
 function updateTimer() {
-  if (time <=1) {
+  if (time <= 1) {
     time = startingTime;
     timer.innerHTML = `${time}`;
-  }else{
+  } else {
     time--;
     timer.innerHTML = `${time}`;
   }
 }
 
-function resetFunc(){
+function resetFunc() {
   clearInterval(id);
   time = startingTime;
-  timer.innerText=time;
+  timer.innerText = time;
   id = setInterval(updateTimer, 1000);
   rotor();
 }
@@ -28,23 +31,21 @@ reset.addEventListener("click", () => {
 });
 
 //Function for Analog Clock Part
-let arm=document.querySelector('#hand');
-let rst=document.querySelector("#reset");
-arm.classList.add('anim');
-arm.style.animationDuration=startingTime+'s';
-function rotor(){
-    arm.classList.remove('anim');
-    void arm.offsetWidth;
-    arm.classList.add('anim');
+let arm = document.querySelector("#hand");
+let rst = document.querySelector("#reset");
+arm.classList.add("anim");
+arm.style.animationDuration = startingTime + "s";
+function rotor() {
+  arm.style.animationDuration = startingTime + "s";
+  arm.classList.remove("anim");
+  void arm.offsetWidth;
+  arm.classList.add("anim");
 }
 
-rst.addEventListener('click',()=>{
+rst.addEventListener("click", () => {
   resetFunc();
-})
+});
 
-
-<<<<<<< Updated upstream
-=======
 start.addEventListener("click", () => {
   if(userInput.value===""){
     startingTime=10;
@@ -54,4 +55,4 @@ start.addEventListener("click", () => {
   resetFunc();
   userInput.value = "";
 });
->>>>>>> Stashed changes
+
