@@ -9,10 +9,14 @@
     <link rel="stylesheet" href="./css/body.css" />
     <link rel="stylesheet" href="./css/digitalTimer.css" />
     <link rel="stylesheet" href="./css/imageCarousel.css" />
+    <link rel="stylesheet" href="./css/header.css" />
   </head>
   <body>
     <div id="container">
-      <div id="header"></div>
+      <div id="header">
+        <input id="entertime" type="text" placeholder="Seconds" />
+        <button id="start">START</button>
+      </div>
       <div id="digital">
         <div class="main">
           <div>
@@ -24,30 +28,35 @@
         </div>
       </div>
 
-        <div id="analog">
-            <div id="clock">
-                <div id="hand"></div>
-            </div>
-            <button id="reset">RESET</button>
+      <div id="analog">
+        <div id="clock">
+          <div id="hand"></div>
         </div>
-        
-        <div id="carousel">
-            <div class="item">
-                <div class="carousel__item carousel__item--selected"><img src="./images/1.jpeg" alt="Image 1"></div>
-                <div class="carousel__item"><img src="./images/2.jpeg" alt="Image 2"></div>
-                <div class="carousel__item"><img src="./images/3.jpg" alt="Image 3"></div>
-            </div>
-            <div class="carousel__nav">
-                <span class="carousel__button carousel__button--selected"></span>
-                <span class="carousel__button"></span>
-                <span class="carousel__button"></span>
-            </div>
-            <div class="resetButton">
-                <button type="reset">RESET</button>
-            </div>
+        <button id="reset">RESET</button>
+      </div>
+
+      <div id="carousel">
+        <div class="item">
+          <div class="carousel__item carousel__item--selected">
+            <img src="./images/1.jpeg" alt="Image 1" />
+          </div>
+          <div class="carousel__item">
+            <img src="./images/2.jpeg" alt="Image 2" />
+          </div>
+          <div class="carousel__item">
+            <img src="./images/3.jpg" alt="Image 3" />
+          </div>
         </div>
+        <div class="carousel__nav">
+          <span class="carousel__button carousel__button--selected"></span>
+          <span class="carousel__button"></span>
+          <span class="carousel__button"></span>
+        </div>
+        <div class="resetButton">
+          <button type="reset">RESET</button>
+        </div>
+      </div>
     </div>
     <script src="./app.js"></script>
   </body>
 </html>
-
