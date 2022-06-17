@@ -12,19 +12,19 @@ body{
 
 #header {
   text-align: center;
-  background-color: pink;
+  /* background-color: pink; */
   flex-basis: 100vw;
   height: 15vh;
 }
 
 #digital {
-  background-color: powderblue;
+  /* background-color: powderblue; */
   flex-grow: 1;
   height: 35vh;
 }
 
 #analog {
-  background-color: bisque;
+  /* background-color: bisque; */
   flex-grow: 1;
   height: 35vh;
 }
