@@ -9,20 +9,19 @@
 
 #clock{
     display:inline-block;
-    margin: 4% auto;
-    border: 5px solid black;
-    width: 150px;
-    height: 150px;
+    margin: 4vh auto;
+    border: 0.625vh solid black;
+    width: 18.75vh;
+    height: 18.75vh;
     border-radius: 80px;
-   
 }
 
 #hand{
     display:inline-block;
-    width: 4px;
-    height: 75px;
+    width: 0.5vh;
+    height: 9.375vh;
     background-color: black;
-    transform-origin: 2px 70px;
+    transform-origin: 0.25vh 8.75vh;
     transform: translateY(5px);
 }
 

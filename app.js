@@ -1,44 +1,45 @@
-
-
-
-
-const startingTime = 15;
-
+let startingTime = 5;
 let time = startingTime;
-
 let reset = document.querySelector(".reset");
-
 const timer = document.getElementById("countdownTimer");
 
-let id = setInterval(updateTimer, 1000);
-
+timer.innerHTML = `${time}`;
+//let id = setInterval(updateTimer, 1000);
 function updateTimer() {
-  if (time < 10) {
-    time = "0" + time;
-  }
-  timer.innerHTML = `${time}`;
-  time--;
-  if (time < 0) {
+  if (time <=1) {
     time = startingTime;
+    timer.innerHTML = `${time}`;
+  }else{
+    time--;
+    timer.innerHTML = `${time}`;
   }
 }
 
-reset.addEventListener("click", () => {
-  clearInterval(setInterval);
+function resetFunc(){
+  clearInterval(id);
   time = startingTime;
+  timer.innerText=time;
+  id = setInterval(updateTimer, 1000);
+  rotor();
+}
+
+reset.addEventListener("click", () => {
+  resetFunc();
 });
 
+//Function for Analog Clock Part
 let arm=document.querySelector('#hand');
 let rst=document.querySelector("#reset");
-arm.classList.add('anim');
+//arm.classList.add('anim');
 arm.style.animationDuration=startingTime+'s';
-
 function rotor(){
     arm.classList.remove('anim');
     void arm.offsetWidth;
     arm.classList.add('anim');
 }
 
-rst.addEventListener('click', rotor)
+rst.addEventListener('click',()=>{
+  resetFunc();
+})
 
 
