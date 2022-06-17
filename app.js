@@ -1,6 +1,7 @@
+
 let userInput = document.getElementById("entertime");
 
-let startingTime = 5;
+let startingTime = 10;
 let time = startingTime;
 let reset = document.querySelector(".reset");
 const timer = document.getElementById("countdownTimer");
