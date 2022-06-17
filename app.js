@@ -1,7 +1,7 @@
 
 let userInput = document.getElementById("entertime");
 
-let startingTime = 10;
+let startingTime = 5;
 let time = startingTime;
 let reset = document.querySelector(".reset");
 const timer = document.getElementById("countdownTimer");
@@ -13,6 +13,7 @@ function updateTimer() {
     time = startingTime;
     timer.innerHTML = `${time}`;
     buttonAnimation();
+    imageAnimation();
   } else {
     time--;
     timer.innerHTML = `${time}`;
@@ -23,8 +24,18 @@ function resetFunc() {
   clearInterval(id);
   time = startingTime;
   timer.innerText = time;
-  id = setInterval(updateTimer, 1000);
   rotor();
+  id = setInterval(updateTimer, 1000);
+  button.forEach(btn => {
+    btn.classList.remove("selected");
+  });
+  button[0].classList.add("selected");
+  i=0;
+  item.forEach(itm => {
+    itm.classList.remove("top");
+  });
+  item[0].classList.add("top");
+  j=0;
 }
 
 reset.addEventListener("click", () => {
@@ -57,6 +68,11 @@ start.addEventListener("click", () => {
   userInput.value = "";
 });
 
+let rst1 = document.querySelector("#reset_");
+rst1.addEventListener("click", () => {
+  resetFunc();
+});
+
 let button=document.querySelectorAll(".button");
 let i=0;
 
@@ -67,4 +83,16 @@ function buttonAnimation(){
     i=0;
   }
   button[i].classList.add("selected");
+}
+
+let item=document.querySelectorAll(".item");
+let j=1;
+
+function imageAnimation(){
+  item[j].classList.remove("top");
+  j++;
+  if(j===3){
+    j=0;
+  }
+  item[j].classList.add("top");
 }
