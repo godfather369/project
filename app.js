@@ -32,9 +32,11 @@ function resetFunc() {
   button[0].classList.add("selected");
   i=0;
   item.forEach(itm => {
-    itm.classList.remove("top");
+    itm.classList.remove("current");
+    itm.classList.remove("next");
   });
-  item[0].classList.add("top");
+  item[0].classList.add("current");
+  item[1].classList.add("next");
   j=0;
 }
 
@@ -86,13 +88,27 @@ function buttonAnimation(){
 }
 
 let item=document.querySelectorAll(".item");
-let j=1;
+let j=0;
 
 function imageAnimation(){
-  item[j].classList.remove("top");
+  item[j].classList.remove("current");
+  if(j==2){
+    item[0].classList.remove("next");
+  }
+  else{
+    item[j+1].classList.remove("next");
+  }
+  
   j++;
   if(j===3){
     j=0;
   }
-  item[j].classList.add("top");
+  
+  item[j].classList.add("current");
+  if(j===2){
+    item[0].classList.add("next");
+  }
+  else{
+    item[j+1].classList.add("next");
+  }
 }
