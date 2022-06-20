@@ -37,12 +37,12 @@ img{
     opacity: 0;
     position: fixed;
     right: 33vw;
-    z-index: 0.5;
 }
 
 .current{
     opacity: 1;   
-    animation: 10s linear infinite fade;
+    animation-duration: 10s;
+    animation-name : fade;
 }
 
 @keyframes fade {
@@ -62,7 +62,8 @@ img{
 
 .next{
     opacity: 1;
-    animation: 10s linear infinite emerge;
+    animation-duration: 10s;
+    animation-name: emerge;
 }
 
 @keyframes emerge {
