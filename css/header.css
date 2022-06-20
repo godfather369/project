@@ -1,4 +1,13 @@
 #entertime,
 #start {
   margin: 6.5vh auto;
+  font-size: 2.1vh;
+}
+
+::placeholder {
+  color: black;
+}
+
+#entertime {
+  background-color: beige;
 }
