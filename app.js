@@ -8,8 +8,9 @@ const timer = document.getElementById("countdownTimer");
 
 timer.innerHTML = `${time}`;
 let id = setInterval(updateTimer, 1000);
+
 function updateTimer() {
-  if (time <= 1) {
+  if (parseInt(time) <= 1) {
     time = startingTime;
     timer.innerHTML = `${time}`;
     buttonAnimation();
@@ -65,6 +66,10 @@ start.addEventListener("click", () => {
     startingTime=10;
   }else{
     startingTime=userInput.value;
+    document.querySelector("#image1").style.animationDuration=startingTime+"s";
+    document.querySelector("#image2").style.animationDuration=startingTime+"s";
+    document.querySelector("#image3").style.animationDuration=startingTime+"s";
+
   }
   resetFunc();
   userInput.value = "";
