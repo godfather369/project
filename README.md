@@ -1,7 +1,7 @@
-# Responsive Image Carousel Project
+#Image Carousel
 
-This web page is a project which is related to image carousel. It starts working automatically when the page is opened.
+This project is about creating an image carousel. It starts working automatically, when the page is opened.
 
-There are three parts in this project - image Carousel, digital timer and analog timer. Each of them contains a reset buttuon. And all the reset buttons are in sync. Means if any of the reset buttons is pressed then all the parts will restart. By default time is 10 seconds. After every 10 seconds, the degital timer restart from 10, the analog timer will restart from the initial position, and the image of image Carousel willl be changed to the next image automatically .
+There are three parts in this project - Image Carousel, Digital Timer and Analog Timer. Each of them contains a reset buttuon. And all the reset buttons are in sync i.e. if any of the reset buttons is pressed, all the parts are reset. The default time interval is 10 seconds. After every time interval, the degital timer, the analog timer will reset to their respective initial positions, and a new image will be displayed in the Image Carousel.
 
-There is one more feature in header section which contains an input bar and a start button. Input bar can take time input from the user and the start button will assign the input to the digital timer, analog timer and image carousel as global time. All the reset buttons will still be functioning.
+There is one more feature in the header section which contains an input bar and a start button. Input bar can take time input from the user and the start button will assign the input as the new time interval for digitaltimer,  analog timer and image carousel. All the reset buttons will still be functioning.
