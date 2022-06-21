@@ -3,8 +3,7 @@
 
 Description :
 
-This web page is a project which is related to image carousel. It starts working automatically when the page is opened. Image gets changed after every 10 seconds(default time).
-
+This web page is a project which is related to image carousel. It starts working automatically when the page is opened. Image gets changed after every time interval.
 
 Features of the project:
 
