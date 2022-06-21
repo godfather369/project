@@ -1,0 +1,40 @@
+#analog {
+  text-align: center;
+}
+
+#reset {
+  display: block;
+  margin: auto auto;
+}
+
+#clock {
+  display: inline-block;
+  margin: 4vh auto;
+  border: 0.625vh solid red;
+  width: 18.75vh;
+  height: 18.75vh;
+  border-radius: 15vh;
+}
+
+#hand {
+  display: inline-block;
+  width: 0.5vh;
+  height: 9.375vh;
+  background-color: white;
+  transform-origin: 0.25vh 8.75vh;
+  transform: translateY(0.625vh);
+}
+
+.rotateHand {
+  animation: linear infinite rotation;
+  animation-duration: 10s;
+}
+
+@keyframes rotation {
+  from {
+    transform: translateY(0.625vh) rotate(0deg);
+  }
+  to {
+    transform: translateY(0.625vh) rotate(360deg);
+  }
+}
