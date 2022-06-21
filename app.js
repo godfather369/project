@@ -11,9 +11,9 @@ arm.classList.add("anim");
 const numberOfImages=3;
 let rstCarousel = document.querySelector("#carousel-reset-button");
 let carouselNavDot=document.querySelectorAll(".carousel-nav-dot");
-let i=0;
+let indexNav=0;
 let carouselImage=document.querySelectorAll(".carousel-image");
-let j=0;
+let indexImg=0;
 
 timer.textContent = `${time}`;
 
@@ -59,34 +59,34 @@ function startFunc() {
 }
 
 function carouselNavDotAnimation(){
-  carouselNavDot[i].classList.remove("selected");
-  i++;
-  if(i===numberOfImages){
-    i=0;
+  carouselNavDot[indexNav].classList.remove("selected");
+  indexNav++;
+  if(indexNav===numberOfImages){
+    indexNav=0;
   }
-  carouselNavDot[i].classList.add("selected");
+  carouselNavDot[indexNav].classList.add("selected");
 }
 
 function carouselImageAnimation(){
-  carouselImage[j].classList.remove("current");
-  if(j==numberOfImages-1){
+  carouselImage[indexImg].classList.remove("current");
+  if(indexImg==numberOfImages-1){
     carouselImage[0].classList.remove("next");
   }
   else{
-    carouselImage[j+1].classList.remove("next");
+    carouselImage[indexImg+1].classList.remove("next");
   }
   
-  j++;
-  if(j===numberOfImages){
-    j=0;
+  indexImg++;
+  if(indexImg===numberOfImages){
+    indexImg=0;
   }
   
-  carouselImage[j].classList.add("current");
-  if(j===2){
+  carouselImage[indexImg].classList.add("current");
+  if(indexImg===numberOfImages-1){
     carouselImage[0].classList.add("next");
   }
   else{
-    carouselImage[j+1].classList.add("next");
+    carouselImage[indexImg+1].classList.add("next");
   }
 }
 
@@ -100,12 +100,12 @@ function resetFunc() {
     carouselNavDotObject.classList.remove("selected");
   });
   carouselNavDot[0].classList.add("selected");
-  i=0;
+  indexNav=0;
   carouselImage.forEach(carouselImageObject => {
     carouselImageObject.classList.remove("current");
     carouselImageObject.classList.remove("next");
   });
   carouselImage[0].classList.add("current");
   carouselImage[1].classList.add("next");
-  j=0;
+  indexImg=0;
 }
