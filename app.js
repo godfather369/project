@@ -1,13 +1,16 @@
-
 let userInput = document.getElementById("entertime");
 
 let startingTime = 10;
 let time = startingTime;
 let reset = document.querySelector(".reset");
 const timer = document.getElementById("countdownTimer");
-
+//Move all variables on the top with appropriate naming convention 
 timer.innerHTML = `${time}`;
+//Do not use innerHtml please
+
 let id = setInterval(updateTimer, 1000);
+
+// change Id name 
 
 function updateTimer() {
   if (parseInt(time) <= 1) {
@@ -66,19 +69,20 @@ start.addEventListener("click", () => {
     startingTime=10;
   }else{
     startingTime=userInput.value;
-    document.querySelector("#image1").style.animationDuration=startingTime+"s";
-    document.querySelector("#image2").style.animationDuration=startingTime+"s";
-    document.querySelector("#image3").style.animationDuration=startingTime+"s";
-
+    item.forEach(itm => {
+      itm.style.animationDuration=startingTime+"s";
+    });
   }
   resetFunc();
   userInput.value = "";
 });
 
 let rst1 = document.querySelector("#reset_");
-rst1.addEventListener("click", () => {
-  resetFunc();
-});
+rst1.addEventListener("click", resetFunc);
+
+// () => {
+//   resetFunc();
+// }
 
 let button=document.querySelectorAll(".button");
 let i=0;

@@ -1,24 +1,24 @@
-.carousel{
-    background-color: black;
-}
-
+/* div containing the navigation dots */
 .carousel_nav{
     width: 100vw;
     height: 5vh;
     text-align: center;
 }
 
+/* Reset button near the Carousel */
 .resetButton{
     width: 100vw;
     height: 5vh;
     text-align: center;
 }
-
+ 
+/* sizing all the images */
 img{
     width: 33vw;
     height: 40vh;
 }
 
+/* styling all the navigation dots */
 .button{
     display: inline-block;
     height: 10px;
@@ -27,6 +27,7 @@ img{
     border-radius: 50%;
 }
 
+/* styling for the selected dot */
 .selected{
     background-color: rgba(255, 255, 255, 0.5);
 }
@@ -61,7 +62,6 @@ img{
 }
 
 .next{
-    opacity: 1;
     animation-duration: 10s;
     animation-name: emerge;
 }
