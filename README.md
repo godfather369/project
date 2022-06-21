@@ -1,11 +1,11 @@
 
 # Responsive Image Carousel Project
 
-Description :
+#### Description :
 
 This web page is a project which is related to image carousel. It starts working automatically when the page is opened. Image gets changed after every time interval.
 
-Features of the project:
+#### Features of the project:
 
 - There are three parts in this project: Image Carousel, Digital Timer and Analog Timer.
 - Each of them contains a reset buttuon. And all the reset buttons are in sink. Means if any of the reset buttons is pressed then all the parts will restart. And by default time is 10 seconds.
