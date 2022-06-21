@@ -26,11 +26,11 @@
 }
 
 .anim{
-    animation: linear infinite rotor;
+    animation: linear infinite rotation;
     animation-duration: 10s;
 }
 
-@keyframes rotor{
+@keyframes rotation{
     from{
         transform:translateY(0.625vh) rotate(0deg);
     }
