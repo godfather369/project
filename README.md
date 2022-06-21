@@ -1,4 +1,3 @@
-
 # Responsive Image Carousel Project
 
 #### Description :
