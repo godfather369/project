@@ -8,6 +8,7 @@ let arm = document.querySelector("#hand");
 let rstAnalog = document.querySelector("#reset");
 arm.classList.add("anim");
 
+const numberOfImages=3;
 let rstCarousel = document.querySelector("#carousel-reset-button");
 let carouselNavDot=document.querySelectorAll(".carousel-nav-dot");
 let i=0;
@@ -60,7 +61,7 @@ function startFunc() {
 function carouselNavDotAnimation(){
   carouselNavDot[i].classList.remove("selected");
   i++;
-  if(i===3){
+  if(i===numberOfImages){
     i=0;
   }
   carouselNavDot[i].classList.add("selected");
@@ -68,7 +69,7 @@ function carouselNavDotAnimation(){
 
 function carouselImageAnimation(){
   carouselImage[j].classList.remove("current");
-  if(j==2){
+  if(j==numberOfImages-1){
     carouselImage[0].classList.remove("next");
   }
   else{
@@ -76,7 +77,7 @@ function carouselImageAnimation(){
   }
   
   j++;
-  if(j===3){
+  if(j===numberOfImages){
     j=0;
   }
   
