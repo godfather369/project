@@ -26,7 +26,8 @@
 }
 
 .anim{
-    animation: 10s linear infinite rotor;
+    animation: linear infinite rotor;
+    animation-duration: 10s;
 }
 
 @keyframes rotor{
