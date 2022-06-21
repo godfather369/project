@@ -14,11 +14,10 @@ const rstDigital = document.querySelector(".reset");
 const arm = document.querySelector("#hand");
 const rstAnalog = document.querySelector("#reset");
 
-const timerId = setInterval(updateTimer, 1000);
+let timerId = setInterval(updateTimer, 1000);
 
-arm.classList.add("anim");
+arm.classList.add("rotateHand");
 timer.textContent = `${time}`;
-
 
 start.addEventListener("click", startFunc);
 rstAnalog.addEventListener("click", resetFunc);
@@ -39,9 +38,9 @@ function updateTimer() {
 
 function rotateClock() {
   arm.style.animationDuration = userInput.value.concat("s");
-  arm.classList.remove("anim");
+  arm.classList.remove("rotateHand");
   void arm.offsetWidth;
-  arm.classList.add("anim");
+  arm.classList.add("rotateHand");
 }
 
 function startFunc() {
@@ -69,6 +68,7 @@ function carouselNavDotAnimation() {
 }
 
 function carouselImageAnimation() {
+  
   carouselImage[indexImg].classList.remove("current");
   if (indexImg == numberOfImages - 1) {
     carouselImage[0].classList.remove("next");
@@ -103,6 +103,7 @@ function resetFunc() {
   carouselImage.forEach((carouselImageObject) => {
     carouselImageObject.classList.remove("current");
     carouselImageObject.classList.remove("next");
+    void carouselImageObject.offsetWidth;
   });
   carouselImage[0].classList.add("current");
   carouselImage[1].classList.add("next");

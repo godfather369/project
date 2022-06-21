@@ -25,7 +25,7 @@
     transform: translateY(0.625vh);
 }
 
-.anim{
+.rotateHand{
     animation: linear infinite rotation;
     animation-duration: 10s;
 }
