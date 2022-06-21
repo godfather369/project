@@ -1,9 +1,8 @@
-
-body{
-    padding:0;
-    margin:0;
-    border: 0;
-    background-color: black;
+body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background-color: black;
 }
 #container {
   display: flex;
@@ -26,12 +25,14 @@ body{
   height: 50vh;
 }
 
-#carousel{
-    flex-basis: 100vw;
-    height: 50vh;
-}
-
-button{
+button {
   font-size: 2vh;
+  border-radius: 8px;
+  background-color: lightsteelblue;
+  color: black;
 }
 
+button:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0px 3px 3px rgb(215, 39, 39);
+}
