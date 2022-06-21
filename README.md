@@ -26,10 +26,10 @@ Functions used in this project -
 
   It resets digital timer to starting time, analog timer to initial position and image carousel to first image, when any of the reset button is pressed.
 
-3. rotor();
+3. rotateClock();
 
   Creates the rotation of the hand of the analog timer.
 
-4. imageAnimation();
+4. carouselImageAnimation();
 
   Changes the image after every time interval and creates the animation when the image gets changed.
