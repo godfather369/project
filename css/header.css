@@ -5,9 +5,9 @@
 }
 
 ::placeholder {
-  color: black;
+  color: rgb(44, 37, 37);
 }
 
 #entertime {
-  background-color: beige;
+  background-color: lightsteelblue;
 }
