@@ -18,18 +18,18 @@ Features of the project:
 
 Functions used in this project -
 
-1. updateTimer();
+#### 1. updateTimer();
 
   Updates the time of ditital timer after every second.
 
-2. resetFunc();
+#### 2. resetFunc();
 
   It resets digital timer to starting time, analog timer to initial position and image carousel to first image, when any of the reset button is pressed.
 
-3. rotateClock();
+#### 3. rotateClock();
 
   Creates the rotation of the hand of the analog timer.
 
-4. carouselImageAnimation();
+#### 4. carouselImageAnimation();
 
   Changes the image after every time interval and creates the animation when the image gets changed.
