@@ -8,11 +8,11 @@ let arm = document.querySelector("#hand");
 let rstAnalog = document.querySelector("#reset");
 arm.classList.add("anim");
 
-let rstCarousel = document.querySelector("#reset_");
-let item=document.querySelectorAll(".item");
-let j=0;
-let button=document.querySelectorAll(".button");
+let rstCarousel = document.querySelector("#carousel-reset-button");
+let carouselNavDot=document.querySelectorAll(".carousel-nav-dot");
 let i=0;
+let carouselImage=document.querySelectorAll(".carousel-image");
+let j=0;
 
 timer.textContent = `${time}`;
 
@@ -27,8 +27,8 @@ function updateTimer() {
   if (parseInt(time) <= 1) {
     time = startingTime;
     timer.textContent = `${time}`;
-    buttonAnimation();
-    imageAnimation();
+    carouselNavDotAnimation();
+    carouselImageAnimation();
   } else {
     time--;
     timer.textContent = `${time}`;
@@ -47,32 +47,32 @@ function startFunc() {
     startingTime=10;
   }else{
     startingTime=parseInt(userInput.value);
-    item.forEach(itm => {
-      itm.classList.remove("current");
-      itm.classList.remove("next");
-      itm.style.animationDuration=userInput.value.concat('s');
+    carouselImage.forEach(carouselImageObject => {
+      carouselImageObject.classList.remove("current");
+      carouselImageObject.classList.remove("next");
+      carouselImageObject.style.animationDuration=userInput.value.concat('s');
     });
   }
   resetFunc();
   userInput.value = "";
 }
 
-function buttonAnimation(){
-  button[i].classList.remove("selected");
+function carouselNavDotAnimation(){
+  carouselNavDot[i].classList.remove("selected");
   i++;
   if(i===3){
     i=0;
   }
-  button[i].classList.add("selected");
+  carouselNavDot[i].classList.add("selected");
 }
 
-function imageAnimation(){
-  item[j].classList.remove("current");
+function carouselImageAnimation(){
+  carouselImage[j].classList.remove("current");
   if(j==2){
-    item[0].classList.remove("next");
+    carouselImage[0].classList.remove("next");
   }
   else{
-    item[j+1].classList.remove("next");
+    carouselImage[j+1].classList.remove("next");
   }
   
   j++;
@@ -80,12 +80,12 @@ function imageAnimation(){
     j=0;
   }
   
-  item[j].classList.add("current");
+  carouselImage[j].classList.add("current");
   if(j===2){
-    item[0].classList.add("next");
+    carouselImage[0].classList.add("next");
   }
   else{
-    item[j+1].classList.add("next");
+    carouselImage[j+1].classList.add("next");
   }
 }
 
@@ -95,16 +95,16 @@ function resetFunc() {
   timer.textContent = time;
   rotateClock();
   timerId = setInterval(updateTimer, 1000);
-  button.forEach(btn => {
-    btn.classList.remove("selected");
+  carouselNavDot.forEach(carouselNavDotObject => {
+    carouselNavDotObject.classList.remove("selected");
   });
-  button[0].classList.add("selected");
+  carouselNavDot[0].classList.add("selected");
   i=0;
-  item.forEach(itm => {
-    itm.classList.remove("current");
-    itm.classList.remove("next");
+  carouselImage.forEach(carouselImageObject => {
+    carouselImageObject.classList.remove("current");
+    carouselImageObject.classList.remove("next");
   });
-  item[0].classList.add("current");
-  item[1].classList.add("next");
+  carouselImage[0].classList.add("current");
+  carouselImage[1].classList.add("next");
   j=0;
 }

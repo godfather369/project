@@ -1,12 +1,12 @@
 /* div containing the navigation dots */
-.carousel_nav{
+.carousel-nav-bar{
     width: 100vw;
     height: 5vh;
     text-align: center;
 }
 
 /* Reset button near the Carousel */
-.resetButton{
+.carousel-reset{
     width: 100vw;
     height: 5vh;
     text-align: center;
@@ -19,7 +19,7 @@ img{
 }
 
 /* styling all the navigation dots */
-.button{
+.carousel-nav-dot{
     display: inline-block;
     height: 10px;
     width: 10px;
@@ -32,7 +32,7 @@ img{
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-.item {
+.carousel-image {
     width: 33vw;
     height: 40vh;
     opacity: 0;
