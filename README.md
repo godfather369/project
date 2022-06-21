@@ -14,7 +14,7 @@ Features of the project:
 - Input bar can take time input from the user and the start button will assign the input to the digital timer, analog timer and image carousel as global time.
 - All the reset buttons will still be functioning.
 
-For developers : 
+## For developers : 
 
 Functions used in this project -
 
