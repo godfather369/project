@@ -5,15 +5,15 @@ let time:number = startingTime;
 let indexNav:number = 0;
 let indexImg:number = 0;
 
-const start:null|HTMLElement=document.getElementById("start")
 const userInput= document.getElementById("entertime") as HTMLInputElement|null;
-const timer:null|HTMLElement = document.getElementById("countdownTimer");
+const start:HTMLElement|null=document.getElementById("start")
+const timer:HTMLElement|null = document.getElementById("countdownTimer");
+const rstCarousel:HTMLElement|null = document.getElementById("carousel-reset-button");
+const rstDigital:HTMLElement|null = document.getElementById("digital-reset");
+const arm:HTMLElement|null = document.getElementById("hand");
+const rstAnalog:HTMLElement|null = document.getElementById("analog-reset");
 const carouselNavDot:NodeListOf<HTMLInputElement> = document.querySelectorAll(".carousel-nav-dot") ;
 const carouselImage:NodeListOf<HTMLInputElement> = document.querySelectorAll(".carousel-image");
-const rstCarousel:null|HTMLElement = document.getElementById("carousel-reset-button");
-const rstDigital:null|HTMLElement = document.getElementById("digital-reset");
-const arm:null|HTMLElement = document.getElementById("hand");
-const rstAnalog:null|HTMLElement = document.getElementById("analog-reset");
 
 let timerId:number = setInterval(updateTimer, 1000);
 
