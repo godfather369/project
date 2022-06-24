@@ -1,50 +1,54 @@
-const numberOfImages = 3;
+const numberOfImages:number = 3;
 
-let startingTime = 10;
-let time = startingTime;
-let indexNav = 0;
-let indexImg = 0;
+let startingTime:number = 10;
+let time:number = startingTime;
+let indexNav:number = 0;
+let indexImg:number = 0;
 
-const userInput = document.getElementById("entertime");
-const timer = document.getElementById("countdownTimer");
-const carouselNavDot = document.querySelectorAll(".carousel-nav-dot");
-const carouselImage = document.querySelectorAll(".carousel-image");
-const rstCarousel = document.querySelector("#carousel-reset-button");
-const rstDigital = document.querySelector(".reset");
-const arm = document.querySelector("#hand");
-const rstAnalog = document.querySelector("#reset");
+const start:null|HTMLElement=document.getElementById("start")
+const userInput= document.getElementById("entertime") as HTMLInputElement|null;
+const timer:null|HTMLElement = document.getElementById("countdownTimer");
+const carouselNavDot:NodeListOf<HTMLInputElement> = document.querySelectorAll(".carousel-nav-dot") ;
+const carouselImage:NodeListOf<HTMLInputElement> = document.querySelectorAll(".carousel-image");
+const rstCarousel:null|HTMLElement = document.getElementById("carousel-reset-button");
+const rstDigital:null|HTMLElement = document.getElementById("digital-reset");
+const arm:null|HTMLElement = document.getElementById("hand");
+const rstAnalog:null|HTMLElement = document.getElementById("analog-reset");
 
-let timerId = setInterval(updateTimer, 1000);
+let timerId:number = setInterval(updateTimer, 1000);
 
-arm.classList.add("rotateHand");
-timer.textContent = `${time}`;
+if(arm)arm.classList.add("rotateHand");
+if(timer)timer.textContent = `${time}`;
 
-start.addEventListener("click", startFunc);
-rstAnalog.addEventListener("click", resetFunc);
-rstCarousel.addEventListener("click", resetFunc);
-rstDigital.addEventListener("click", resetFunc);
+if(start) start.addEventListener("click", startFunc);
+if(rstAnalog)rstAnalog.addEventListener("click", resetFunc);
+if(rstCarousel) rstCarousel.addEventListener("click", resetFunc);
+if(rstDigital) rstDigital.addEventListener("click", resetFunc);
 
-function updateTimer() {
-  if (parseInt(time) <= 1) {
+function updateTimer():void {
+  if (time <= 1) {
     time = startingTime;
-    timer.textContent = `${time}`;
+    if(timer) timer.textContent = `${time}`;
     carouselNavDotAnimation();
     carouselImageAnimation();
   } else {
     time--;
-    timer.textContent = `${time}`;
+    if(timer)timer.textContent = `${time}`;
   }
 }
 
-function rotateClock() {
-  arm.style.animationDuration = userInput.value.concat("s");
+function rotateClock():void {
+  if(arm && userInput){
+    arm.style.animationDuration = userInput.value.concat("s");
   arm.classList.remove("rotateHand");
   void arm.offsetWidth;
   arm.classList.add("rotateHand");
+  }
 }
 
-function startFunc() {
-  if (userInput.value === "") {
+function startFunc():void {
+  if(userInput){
+    if (userInput.value === "") {
     startingTime = 10;
   } else {
     startingTime = parseInt(userInput.value);
@@ -54,11 +58,12 @@ function startFunc() {
       carouselImageObject.style.animationDuration = userInput.value.concat("s");
     });
   }
+  }
   resetFunc();
-  userInput.value = "";
+  if(userInput) userInput.value = "";
 }
 
-function carouselNavDotAnimation() {
+function carouselNavDotAnimation():void {
   carouselNavDot[indexNav].classList.remove("selected");
   indexNav++;
   if (indexNav === numberOfImages) {
@@ -67,7 +72,7 @@ function carouselNavDotAnimation() {
   carouselNavDot[indexNav].classList.add("selected");
 }
 
-function carouselImageAnimation() {
+function carouselImageAnimation():void {
   
   carouselImage[indexImg].classList.remove("current");
   if (indexImg == numberOfImages - 1) {
@@ -89,10 +94,10 @@ function carouselImageAnimation() {
   }
 }
 
-function resetFunc() {
+function resetFunc():void {
   clearInterval(timerId);
   time = startingTime;
-  timer.textContent = time;
+  if(timer) timer.textContent = `${time}`;
   rotateClock();
   timerId = setInterval(updateTimer, 1000);
   carouselNavDot.forEach((carouselNavDotObject) => {
@@ -100,6 +105,7 @@ function resetFunc() {
   });
   carouselNavDot[0].classList.add("selected");
   indexNav = 0;
+  let carouseImageObject:HTMLInputElement|null;
   carouselImage.forEach((carouselImageObject) => {
     carouselImageObject.classList.remove("current");
     carouselImageObject.classList.remove("next");
